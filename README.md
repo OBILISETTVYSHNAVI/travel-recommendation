@@ -13,8 +13,7 @@ The Travel Destination Recommender System leverages machine learning techniques,
       Deployment: The model is deployed using Gradio in Google Colab for an interactive user experience.
 
 
-   
-3. Dataset Overview & Feature Descriptions:
+2. Dataset Overview & Feature Descriptions:
 
 The system is trained on four datasets containing structured travel-related information:
 
@@ -81,7 +80,7 @@ TravelFrequency	           -    Frequency of travel (e.g., Monthly, Yearly)
 Budget	                  -     Estimated travel budget range
 
 
-4. Data Preprocessing & Feature Selection:
+3. Data Preprocessing & Feature Selection:
 
 To ensure data quality, the following preprocessing techniques were applied:
 
@@ -100,7 +99,6 @@ Data Splitting:A StratifiedShuffleSplit is used to maintain class distribution i
 Selected Features for Model Training:
 
 Input Features (X):
-
             1.State (Categorical)
             2.Type (Categorical)
             3.BestTimeToVisit (Categorical)
@@ -111,70 +109,77 @@ Target Variable (y):
             Name (Encoded Travel Destination)
 
 
-5. Model Architecture & Hyperparameter Tuning:
+4. Model Architecture & Hyperparameter Tuning:
 
 To enhance accuracy, an ensemble learning approach was adopted, combining:
 
 1️⃣ Random Forest Classifier
 
 n_estimators = 200
+
 max_depth = 7
+
 random_state = 42
 
 2️⃣ Gradient Boosting Classifier
 
 n_estimators = 200
+
 learning_rate = 0.05
+
 max_depth = 4
+
 random_state = 42
 
 Final Model: Voting Classifier
 
 To leverage the strengths of both classifiers, a soft voting strategy is used, combining predictions probabilistically.
 
-6. Performance Evaluation & Results:
+5. Performance Evaluation & Results:
 
 Model Accuracy: The trained ensemble model achieved 75% accuracy on the test dataset.
 
 Manual Recommendations: A rule-based fallback system provides recommendations when model predictions are uncertain.
 
       Evaluation Metrics:
+      
 Metric	            Score
+
 Accuracy	            75%
 
 Precision	      TBD (Future Improvement)
 
 Recall	        TBD (Future Improvement)
 
-7. Deployment & User Interface:
+6. Deployment & User Interface:
 
-Deployment Strategy:
+   Deployment Strategy:
 
-1.The model is deployed via Gradio, enabling real-time interaction within Google Colab.
+            1.The model is deployed via Gradio, enabling real-time interaction within Google Colab.
+            
+            2.The UI consists of dropdowns for state, type, and best time to visit, returning destination recommendations.
 
-2.The UI consists of dropdowns for state, type, and best time to visit, returning destination recommendations.
+   Future Deployment Plan:
 
-Future Deployment Plan:
-
-1.Convert the Gradio-based system into a mobile application using Flutter or React Native.
-
-2.Deploy the model on cloud infrastructure for persistent availability.
+            1.Convert the Gradio-based system into a mobile application using Flutter or React Native.
+            
+            2.Deploy the model on cloud infrastructure for persistent availability.
 
 
-8. Future Enhancements:
+7. Future Enhancements:
 
-To further improve recommendation accuracy and user experience, the following enhancements are planned:
+   To further improve recommendation accuracy and user experience, the following enhancements are planned:
 
-✅ Expand Data Sources: Integrate more user preference data and real-time travel trends.
-
-✅ Enhance Model Performance: Experiment with Neural Networks and Transformer-based recommendation models.
-
-✅ Improve Personalization: Implement collaborative filtering for user-based recommendations.
-
-✅ Mobile App Development: Develop a fully functional mobile application for travel recommendations.
-
-✅ Cloud Hosting: Deploy the system on AWS/GCP/Azure for scalable performance.
+            ✅ Expand Data Sources: Integrate more user preference data and real-time travel trends.
+            
+            ✅ Enhance Model Performance: Experiment with Neural Networks and Transformer-based recommendation models.
+            
+            ✅ Improve Personalization: Implement collaborative filtering for user-based recommendations.
+            
+            ✅ Mobile App Development: Develop a fully functional mobile application for travel recommendations.
+            
+            ✅ Cloud Hosting: Deploy the system on AWS/GCP/Azure for scalable performance.
   
-Conclusion
+8.Conclusion
 
 The Travel Destination Recommendation System is a robust and scalable solution that enhances travel planning through machine learning-driven recommendations. With ongoing enhancements, it aims to provide personalized, accurate, and real-time travel suggestions.
