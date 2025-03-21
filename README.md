@@ -19,9 +19,11 @@ The Travel Destination Recommender System leverages machine learning techniques,
 The system is trained on four datasets containing structured travel-related information:
 
 1️⃣ Expanded_Destinations.csv
+
 Contains metadata for travel destinations.
 
 Column Name	                  Description
+
 Name	               -   Name of the travel destination
 
 State	               -   State where the destination is located
@@ -35,9 +37,11 @@ BestTimeToVisit	      -  Ideal season to visit the destination
 Rating	             -   Average user rating of the destination
 
 2️⃣ Final_Updated_Expanded_Reviews.csv
+
 Contains user-generated reviews for different destinations.
 
 Column Name                       Description
+
 UserID	               -    Unique identifier for the user
 
 DestinationName	          - Name of the reviewed destination
@@ -47,9 +51,11 @@ Review	                 -  Text-based review by the user
 Rating	                  - Rating provided by the user (scale of 1-5)
 
 3️⃣ Final_Updated_Expanded_UserHistory.csv
+
 Stores user travel history and preferences.
 
 Column Name	                        Description
+
 UserID	                  -     Unique identifier for the user
 
 PastVisitedDestinations	       -List of previously visited destinations
@@ -59,10 +65,13 @@ PreferredType	              -   User's preferred type of travel (e.g., Adventure
 PreferredSeason	               -User's preferred season for travelling
 
 4️⃣ Final_Updated_Expanded_Users.csv
+
 Contains demographic and travel behavior data of users.
 
 Column Name	                             Description
+
 UserID	                       Unique identifier for the user
+
 Age                        -    Age of the user
 
 Gender	                -       Gender of the user
@@ -89,6 +98,7 @@ Feature Scaling:Popularity and Rating are normalized using StandardScaler to ens
 Data Splitting:A StratifiedShuffleSplit is used to maintain class distribution in training and test datasets.
 
 Selected Features for Model Training:
+
 Input Features (X):
 
             1.State (Categorical)
@@ -96,8 +106,8 @@ Input Features (X):
             3.BestTimeToVisit (Categorical)
             4.Popularity (Numerical)
             5.Rating (Numerical)
+            
 Target Variable (y):
-
             Name (Encoded Travel Destination)
 
 
@@ -106,11 +116,13 @@ Target Variable (y):
 To enhance accuracy, an ensemble learning approach was adopted, combining:
 
 1️⃣ Random Forest Classifier
+
 n_estimators = 200
 max_depth = 7
 random_state = 42
 
 2️⃣ Gradient Boosting Classifier
+
 n_estimators = 200
 learning_rate = 0.05
 max_depth = 4
