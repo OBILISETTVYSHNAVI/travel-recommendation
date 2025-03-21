@@ -3,15 +3,15 @@ Travel Destination Recommender System
 
             The Travel Destination Recommender System leverages machine learning techniques, specifically ensemble learning, to provide personalized travel recommendations. The                       methodology consists of the following key steps:
             
-                  Data Acquisition: Multiple datasets containing travel destinations, user reviews, travel history, and user demographics are integrated.
+                  1.Data Acquisition: Multiple datasets containing travel destinations, user reviews, travel history, and user demographics are integrated.
                
-                  Data Preprocessing: The data undergoes cleaning, encoding, and standardization to enhance model performance.
+                  2.Data Preprocessing: The data undergoes cleaning, encoding, and standardization to enhance model performance.
                
-                  Feature Engineering: Key travel-related features such as popularity, rating, state, and best time to visit are selected.
+                  3.Feature Engineering: Key travel-related features such as popularity, rating, state, and best time to visit are selected.
                
-                  Model Selection & Training: A combination of RandomForestClassifier and GradientBoostingClassifier is employed to improve prediction accuracy.
+                  4.Model Selection & Training: A combination of RandomForestClassifier and GradientBoostingClassifier is employed to improve prediction accuracy.
                
-                  Deployment: The model is deployed using Gradio in Google Colab for an interactive user experience.
+                  5.Deployment: The model is deployed using Gradio in Google Colab for an interactive user experience.
 
 
 2. Dataset Overview & Feature Descriptions:
@@ -144,18 +144,18 @@ Travel Destination Recommender System
       Model Accuracy: The trained ensemble model achieved 75% accuracy on the test dataset.
       
       Manual Recommendations: A rule-based fallback system provides recommendations when model predictions are uncertain.
-
-                                                                        Evaluation Metrics:
+   
+                                                      Evaluation Metrics:
       
-                                                                  Metric	            Score
+                                                   Metric	            Score
                                                                   
-                                                                  Accuracy	            75%
+                                                   Accuracy	            75%
                                                                   
-                                                                  Precision	      TBD (Future Improvement)
+                                                   Precision	      TBD (Future Improvement)
                                                                   
-                                                                  Recall	        TBD (Future Improvement)
+                                                   Recall	        TBD (Future Improvement)
 
-5. Deployment & User Interface:
+6. Deployment & User Interface:
 
                Deployment Strategy:
 
@@ -170,7 +170,7 @@ Travel Destination Recommender System
                               2.Deploy the model on cloud infrastructure for persistent availability.
 
 
-6. Future Enhancements:
+7. Future Enhancements:
 
          To further improve recommendation accuracy and user experience, the following enhancements are planned:
 
