@@ -22,40 +22,54 @@ The system is trained on four datasets containing structured travel-related info
 Contains metadata for travel destinations.
 
 Column Name	                  Description
-Name	                  Name of the travel destination
-State	                  State where the destination is located
-Type	                  Category of the destination (e.g., Beach, Historical, Nature)
-Popularity	            Popularity score based on visit frequency
-BestTimeToVisit	        Ideal season to visit the destination
-Rating	                Average user rating of the destination
+Name	               -   Name of the travel destination
+
+State	               -   State where the destination is located
+
+Type	                -  Category of the destination (e.g., Beach, Historical, Nature)
+
+Popularity	           - Popularity score based on visit frequency
+
+BestTimeToVisit	      -  Ideal season to visit the destination
+
+Rating	             -   Average user rating of the destination
 
 2️⃣ Final_Updated_Expanded_Reviews.csv
 Contains user-generated reviews for different destinations.
 
 Column Name                       Description
-UserID	                   Unique identifier for the user
-DestinationName	           Name of the reviewed destination
-Review	                   Text-based review by the user
-Rating	                   Rating provided by the user (scale of 1-5)
+UserID	               -    Unique identifier for the user
+
+DestinationName	          - Name of the reviewed destination
+
+Review	                 -  Text-based review by the user
+
+Rating	                  - Rating provided by the user (scale of 1-5)
 
 3️⃣ Final_Updated_Expanded_UserHistory.csv
 Stores user travel history and preferences.
 
 Column Name	                        Description
-UserID	                       Unique identifier for the user
-PastVisitedDestinations	       List of previously visited destinations
-PreferredType	                 User's preferred type of travel (e.g., Adventure, Historical)
-PreferredSeason	               User's preferred season for travelling
+UserID	                  -     Unique identifier for the user
+
+PastVisitedDestinations	       -List of previously visited destinations
+
+PreferredType	              -   User's preferred type of travel (e.g., Adventure, Historical)
+
+PreferredSeason	               -User's preferred season for travelling
 
 4️⃣ Final_Updated_Expanded_Users.csv
 Contains demographic and travel behavior data of users.
 
 Column Name	                             Description
 UserID	                       Unique identifier for the user
-Age                            Age of the user
-Gender	                       Gender of the user
-TravelFrequency	               Frequency of travel (e.g., Monthly, Yearly)
-Budget	                       Estimated travel budget range
+Age                        -    Age of the user
+
+Gender	                -       Gender of the user
+
+TravelFrequency	           -    Frequency of travel (e.g., Monthly, Yearly)
+
+Budget	                  -     Estimated travel budget range
 
 
 4. Data Preprocessing & Feature Selection:
@@ -115,7 +129,9 @@ Manual Recommendations: A rule-based fallback system provides recommendations wh
       Evaluation Metrics:
 Metric	            Score
 Accuracy	            75%
+
 Precision	      TBD (Future Improvement)
+
 Recall	        TBD (Future Improvement)
 
 7. Deployment & User Interface:
