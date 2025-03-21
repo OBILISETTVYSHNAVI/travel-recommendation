@@ -1,6 +1,7 @@
 Travel Destination Recommender System
-1. Approach & Methodology
+1. Approach & Methodology:
 The Travel Destination Recommender System leverages machine learning techniques, specifically ensemble learning, to provide personalized travel recommendations. The methodology consists of the following key steps:
+
       Data Acquisition: Multiple datasets containing travel destinations, user reviews, travel history, and user demographics are integrated.
       Data Preprocessing: The data undergoes cleaning, encoding, and standardization to enhance model performance.
       Feature Engineering: Key travel-related features such as popularity, rating, state, and best time to visit are selected.
@@ -9,7 +10,8 @@ The Travel Destination Recommender System leverages machine learning techniques,
 
 
    
-2. Dataset Overview & Feature Descriptions
+3. Dataset Overview & Feature Descriptions:
+
 The system is trained on four datasets containing structured travel-related information:
 1️⃣ Expanded_Destinations.csv
 Contains metadata for travel destinations.
@@ -20,6 +22,7 @@ Type	                  Category of the destination (e.g., Beach, Historical, Nat
 Popularity	            Popularity score based on visit frequency
 BestTimeToVisit	        Ideal season to visit the destination
 Rating	                Average user rating of the destination
+
 2️⃣ Final_Updated_Expanded_Reviews.csv
 Contains user-generated reviews for different destinations.
 Column Name                       Description
@@ -27,13 +30,15 @@ UserID	                   Unique identifier for the user
 DestinationName	           Name of the reviewed destination
 Review	                   Text-based review by the user
 Rating	                   Rating provided by the user (scale of 1-5)
+
 3️⃣ Final_Updated_Expanded_UserHistory.csv
 Stores user travel history and preferences.      
 Column Name	                        Description
 UserID	                       Unique identifier for the user
 PastVisitedDestinations	       List of previously visited destinations
 PreferredType	                 User's preferred type of travel (e.g., Adventure, Historical)
-PreferredSeason	               User's preferred season for traveling
+PreferredSeason	               User's preferred season for travelling
+
 4️⃣ Final_Updated_Expanded_Users.csv
 Contains demographic and travel behavior data of users.
 Column Name	                             Description
@@ -44,14 +49,19 @@ TravelFrequency	               Frequency of travel (e.g., Monthly, Yearly)
 Budget	                       Estimated travel budget range
 
 
-3. Data Preprocessing & Feature Selection
+4. Data Preprocessing & Feature Selection:
+
 To ensure data quality, the following preprocessing techniques were applied:
 Handling Missing Values:
           1.Numerical columns are imputed with the mean.
           2.Categorical columns are imputed with the mode.
+          
 Encoding Categorical Variables:State, Type, BestTimeToVisit, and Name are label-encoded.
+
 Feature Scaling:Popularity and Rating are normalized using StandardScaler to ensure uniformity.
+
 Data Splitting:A StratifiedShuffleSplit is used to maintain class distribution in training and test datasets.
+
 Selected Features for Model Training:
 Input Features (X):
 1.State (Categorical)
@@ -62,39 +72,48 @@ Input Features (X):
 Target Variable (y):Name (Encoded Travel Destination)
 
 
-4. Model Architecture & Hyperparameter Tuning
+5. Model Architecture & Hyperparameter Tuning:
+
 To enhance accuracy, an ensemble learning approach was adopted, combining:
 1️⃣ Random Forest Classifier
 n_estimators = 200
 max_depth = 7
 random_state = 42
+
 2️⃣ Gradient Boosting Classifier
 n_estimators = 200
 learning_rate = 0.05
 max_depth = 4
 random_state = 42
+
 Final Model: Voting Classifier
+
 To leverage the strengths of both classifiers, a soft voting strategy is used, combining predictions probabilistically.
 
-5. Performance Evaluation & Results
+6. Performance Evaluation & Results:
+
 Model Accuracy: The trained ensemble model achieved 75% accuracy on the test dataset.
+
 Manual Recommendations: A rule-based fallback system provides recommendations when model predictions are uncertain.
+
 Evaluation Metrics:
 Metric	            Score
 Accuracy	            75%
 Precision	      TBD (Future Improvement)
 Recall	        TBD (Future Improvement)
 
-6. Deployment & User Interface
+7. Deployment & User Interface:
+
 Deployment Strategy:
-The model is deployed via Gradio, enabling real-time interaction within Google Colab.
-The UI consists of dropdowns for state, type, and best time to visit, returning destination recommendations.
+1.The model is deployed via Gradio, enabling real-time interaction within Google Colab.
+2.The UI consists of dropdowns for state, type, and best time to visit, returning destination recommendations.
+
 Future Deployment Plan:
-Convert the Gradio-based system into a mobile application using Flutter or React Native.
-Deploy the model on cloud infrastructure for persistent availability.
+1.Convert the Gradio-based system into a mobile application using Flutter or React Native.
+2.Deploy the model on cloud infrastructure for persistent availability.
 
 
-7. Future Enhancements
+8. Future Enhancements
 To further improve recommendation accuracy and user experience, the following enhancements are planned:
 ✅ Expand Data Sources: Integrate more user preference data and real-time travel trends.
 ✅ Enhance Model Performance: Experiment with Neural Networks and Transformer-based recommendation models.
